@@ -1,8 +1,17 @@
 source 'https://rubygems.org'
 
-
+gem 'ruby', '2.2.1'
 gem 'rails', '4.2.1'
+
+group:development, :test do
 gem 'sqlite3'
+end
+
+group:production, :test do
+    gem 'pg'
+    gem 'rails_12factor'
+end
+
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
